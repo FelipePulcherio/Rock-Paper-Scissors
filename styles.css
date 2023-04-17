@@ -22,4 +22,22 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Vast Shadow', cursive;
 }
+
+.head {
+  width: 1000px;
+}
+
+.head .title {
+  font-size: 52px;
+  text-align: center;
+  padding: 20px;
+}
+
+.head .subTitle {
+  font-size: 36px;
+  text-align: center;
+  padding: 10px;
+}
+
