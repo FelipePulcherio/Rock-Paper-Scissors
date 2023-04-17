@@ -1,0 +1,14 @@
+* {
+  border: solid red 1px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-image: url("./images/oldPaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+}
