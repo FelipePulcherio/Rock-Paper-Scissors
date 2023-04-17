@@ -36,9 +36,55 @@ body {
 }
 
 .head .subTitle {
-  font-size: 36px;
+  font-size: 38px;
   text-align: center;
   padding: 10px;
+}
+
+.table {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.player, .opponent {
+  width: 400px;
+  border: solid black 3px;
+  border-radius: 15px;
+}
+
+.table > img {
+  width: 30px;
+  height: 30px;
+  padding: 5px 0px 5px 0px;
+}
+
+.table .title {
+  font-size: 30px;
+  text-align: center;
+  padding: 8px;
+}
+
+.table .score {
+  font-size: 20px;
+  text-align: center;
+  padding: 8px;
+}
+
+.table .selection {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0px 20px 0px;
+}
+
+.selection > div {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  border-radius: 5px;
 }
 
 .footer {
