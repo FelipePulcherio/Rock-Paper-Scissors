@@ -103,7 +103,7 @@ function playRound(playerSelection, computerSelection) {
   }
   return message;
 }
-
+/*
 game(5);
 function game(number) {
   let playerStreak = 0;
@@ -132,4 +132,4 @@ function game(number) {
     console.log(`Player Streak: ${playerStreak}, Computer Streak: ${computerStreak}`);
   }
   return;
-}
+}*/
