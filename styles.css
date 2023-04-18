@@ -1,3 +1,9 @@
+/*
+https://fonts.google.com/specimen/Vast+Shadow?preview.text=TITLE&preview.layout=row&preview.text_type=custom&category=Display&subset=latin&noto.script=Latn
+https://www.w3schools.com/cssref/css_selectors.php
+https://stackoverflow.com/questions/9555998/viewport-of-background-image-centered
+*/
+
 * {
   border: solid red 1px;
 }
@@ -56,10 +62,15 @@ body {
   border-radius: 15px;
 }
 
-.table > img {
-  width: 30px;
-  height: 30px;
-  padding: 5px 0px 5px 0px;
+.table img {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .table .title {
