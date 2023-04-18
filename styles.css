@@ -91,7 +91,7 @@ body {
   padding: 20px 0px 20px 0px;
 }
 
-.selection > img {
+.container > img {
   width: 100px;
   height: 100px;
   border: solid black 2px;
@@ -99,7 +99,7 @@ body {
   object-fit: cover;
 }
 
-.selection > .scissors {
+.container > .scissors {
   object-fit: contain;
 }
 
