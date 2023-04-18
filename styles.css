@@ -11,7 +11,7 @@ https://stackoverflow.com/questions/9555998/viewport-of-background-image-centere
 html {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: white;
   background-image: url("./images/oldPaper.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -106,4 +106,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.footer img {
+  width: 27px;
+  height: 27px;
+  margin: 0;
+  padding: 0px;
 }
