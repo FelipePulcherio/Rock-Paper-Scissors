@@ -21,22 +21,14 @@ function validatePlayerChoice(playerSelection) {
   const paperRegEx = /^paper$/i;
   const scissorsRegEx = /^scissors$/i;
 
-  if (playerSelection === null) { 
-    alert("You have cancelled the game!");
-    return false;
-  }
-  else if (rockRegEx.test(playerSelection)) {
+  if (rockRegEx.test(playerSelection)) {
     return "Rock";
   }
   else if (paperRegEx.test(playerSelection)) {
     return "Paper";
   }
-  else if (scissorsRegEx.test(playerSelection)) {
+  else (scissorsRegEx.test(playerSelection)) {
     return "Scissors";
-  }
-  else {
-    playerSelection = prompt("Invalid value inserted! \nPlease choose between: Rock, Paper or Scissors.");
-    return validatePlayerChoice(playerSelection);
   }
 }
 
