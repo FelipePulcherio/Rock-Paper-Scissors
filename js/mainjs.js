@@ -120,7 +120,6 @@ function game() {
 
   const computerSelection = getComputerChoice();
   const opponent = document.querySelector(`.opponent .${computerSelection.toLocaleLowerCase()}`);
-  console.log(opponent.parentElement);
 
   let finalMessage = playRound(playerSelection, computerSelection);
   
@@ -128,14 +127,17 @@ function game() {
     playerStreak = parseInt(playerScore.textContent.slice(-1)) + 1;
     playerScore.textContent = `Score: ${playerStreak}`;
     this.classList.add('winner');
+    opponent.parentElement.classList.add('loser');
   }
   else if (lostRegEx.test(finalMessage)) {
     computerStreak = parseInt(computerScore.textContent.slice(-1)) + 1;
     computerScore.textContent = `Score: ${computerStreak}`;
     this.classList.add('loser');
+    opponent.parentElement.classList.add('winner');
   }
   else {
     this.classList.add('loser');
+    opponent.parentElement.classList.add('loser');
   }
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
