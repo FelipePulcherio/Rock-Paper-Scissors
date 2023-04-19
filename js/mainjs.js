@@ -102,26 +102,24 @@ function game() {
   const wonRegEx = /won/g;
   const lostRegEx = /lost/g;
 
-  for (let i = 0; i < 10; i++) {
-    let playerSelection = this.lastElementChild.classList.value;
-    if (validatePlayerChoice(playerSelection) === false) return;
-    playerSelection = validatePlayerChoice(playerSelection);
-    const computerSelection = getComputerChoice();
-    let finalMessage = playRound(playerSelection, computerSelection);
-    
-    if (wonRegEx.test(finalMessage)) {
-      playerStreak += 1;
-    }
-    else if (lostRegEx.test(finalMessage)) {
-      computerStreak += 1;
-    }
-    else {
-      playerStreak += 1;
-      computerStreak += 1;
-    }
-
-    console.log(`Player Streak: ${playerStreak}, Computer Streak: ${computerStreak}`);
+  let playerSelection = this.lastElementChild.classList.value;
+  if (validatePlayerChoice(playerSelection) === false) return;
+  playerSelection = validatePlayerChoice(playerSelection);
+  const computerSelection = getComputerChoice();
+  let finalMessage = playRound(playerSelection, computerSelection);
+  
+  if (wonRegEx.test(finalMessage)) {
+    playerStreak += 1;
   }
+  else if (lostRegEx.test(finalMessage)) {
+    computerStreak += 1;
+  }
+  else {
+    playerStreak += 1;
+    computerStreak += 1;
+  }
+
+  console.log(`Player Streak: ${playerStreak}, Computer Streak: ${computerStreak}`);
   return;
 }
 
