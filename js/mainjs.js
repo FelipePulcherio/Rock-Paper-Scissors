@@ -142,16 +142,15 @@ function game() {
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', game) );
-    console.log("Player is the winner!");
+    /*console.log("Player is the winner!");*/
   }
   else if (parseInt(computerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', game) );
-    console.log("Computer is the winner!");
+    /*console.log("Computer is the winner!");*/
   }
 
   return;
 }
 
 const buttons = document.querySelectorAll('.player .container');
-console.log(buttons);
 buttons.forEach( (button) => button.addEventListener('click', game) );
