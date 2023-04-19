@@ -134,11 +134,6 @@ function game() {
   return;
 }
 
-function getPlayerChoice(e) {
-  e.stopPropagation();
-  console.log(this.lastElementChild.classList.value);
-}
-
 const buttons = document.querySelectorAll('.player .container');
 console.log(buttons);
 buttons.forEach( (button) => button.addEventListener('click', game) );
