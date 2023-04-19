@@ -102,9 +102,15 @@ function game() {
   const wonRegEx = /won/g;
   const lostRegEx = /lost/g;
 
+  const playerScore = document.querySelector(".player .score");
+  const computerScore = document.querySelector(".opponent .score");
+
+  console.log(playerScore.textContent);
+
   let playerSelection = this.lastElementChild.classList.value;
   if (validatePlayerChoice(playerSelection) === false) return;
   playerSelection = validatePlayerChoice(playerSelection);
+
   const computerSelection = getComputerChoice();
   let finalMessage = playRound(playerSelection, computerSelection);
   
@@ -119,7 +125,7 @@ function game() {
     computerStreak += 0;
   }
 
-  console.log(`Player Streak: ${playerStreak}, Computer Streak: ${computerStreak}`);
+  /*console.log(`Player Streak: ${playerStreak}, Computer Streak: ${computerStreak}`);*/
   return;
 }
 
@@ -129,6 +135,4 @@ function getPlayerChoice(e) {
 }
 
 const buttons = document.querySelectorAll('.player .container');
-buttons.forEach((button) => {
-  button.addEventListener('click', game);
-});
+buttons.forEach( (button) => button.addEventListener('click', game) );
