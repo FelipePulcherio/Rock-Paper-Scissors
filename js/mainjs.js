@@ -111,7 +111,7 @@ function game() {
   const lostRegEx = /lost/g;
 
   for (let i = 0; i < 10; i++) {
-    const playerSelection = this.lastElementChild.classList.value;
+    let playerSelection = this.lastElementChild.classList.value;
     if (validatePlayerChoice(playerSelection) === false) return;
     playerSelection = validatePlayerChoice(playerSelection);
     const computerSelection = getComputerChoice();
@@ -140,5 +140,5 @@ function getPlayerChoice(e) {
 
 const buttons = document.querySelectorAll('.player .container');
 buttons.forEach((button) => {
-  button.addEventListener('click', getPlayerChoice);
+  button.addEventListener('click', game);
 });
