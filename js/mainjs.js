@@ -104,16 +104,15 @@ function playRound(playerSelection, computerSelection) {
   return message;
 }
 
-function game(number) {
+function game() {
   let playerStreak = 0;
   let computerStreak = 0;
   const wonRegEx = /won/g;
   const lostRegEx = /lost/g;
 
-  for (let i = 0; i < number; i++) {
-    let playerSelection = prompt("Please choose between: Rock, Paper or Scissors.");
-    if (validatePlayerChoice(playerSelection) === false) return;
-    playerSelection = validatePlayerChoice(playerSelection);
+  for (let i = 0; i < 10; i++) {
+    const playerSelection = this.lastElementChild.classList.value;
+
     const computerSelection = getComputerChoice();
     let finalMessage = playRound(playerSelection, computerSelection);
     
