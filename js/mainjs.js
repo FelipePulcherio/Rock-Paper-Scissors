@@ -27,7 +27,7 @@ function validatePlayerChoice(playerSelection) {
   else if (paperRegEx.test(playerSelection)) {
     return "Paper";
   }
-  else (scissorsRegEx.test(playerSelection)) {
+  else if (scissorsRegEx.test(playerSelection)) {
     return "Scissors";
   }
 }
