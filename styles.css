@@ -129,6 +129,18 @@ body {
   box-shadow: 0px 0px 25px rgb(255, 145, 0);
 }
 
+.container.winner, .container.loser {
+  transform: scale(1.15);
+}
+
+.container.winner img {
+  box-shadow: 0px 0px 25px rgb(0, 255, 0);
+}
+
+.container.loser img {
+  box-shadow: 0px 0px 25px rgb(255, 0, 0);
+}
+
 .footer {
   width: 1000px;
   font-size: 22px;
