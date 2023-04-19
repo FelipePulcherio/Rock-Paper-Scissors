@@ -105,8 +105,6 @@ function game() {
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
 
-  console.log(playerScore.textContent);
-
   let playerSelection = this.lastElementChild.classList.value;
   if (validatePlayerChoice(playerSelection) === false) return;
   playerSelection = validatePlayerChoice(playerSelection);
@@ -115,17 +113,18 @@ function game() {
   let finalMessage = playRound(playerSelection, computerSelection);
   
   if (wonRegEx.test(finalMessage)) {
-    playerStreak += 1;
+    playerStreak = parseInt(playerScore.textContent.slice(-1)) + 1;
+    playerScore.textContent = `Score: ${playerStreak}`;
   }
   else if (lostRegEx.test(finalMessage)) {
-    computerStreak += 1;
+    computerStreak = parseInt(computerScore.textContent.slice(-1)) + 1;
+    computerScore.textContent = `Score: ${computerStreak}`;
   }
   else {
     playerStreak += 0;
     computerStreak += 0;
   }
 
-  /*console.log(`Player Streak: ${playerStreak}, Computer Streak: ${computerStreak}`);*/
   return;
 }
 
