@@ -3,10 +3,10 @@ https://fonts.google.com/specimen/Vast+Shadow?preview.text=TITLE&preview.layout=
 https://www.w3schools.com/cssref/css_selectors.php
 https://stackoverflow.com/questions/9555998/viewport-of-background-image-centered
 */
-/*
+
 * {
   border: solid red 1px;
-}*/
+}
 
 html {
   width: 100%;
@@ -16,7 +16,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 body {
