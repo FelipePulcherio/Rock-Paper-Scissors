@@ -103,6 +103,9 @@ function game() {
   const lostRegEx = /lost/g;
 
   const buttons = document.querySelectorAll('.player .container');
+  buttons.forEach( (button) => button.classList.remove('winner') );
+  buttons.forEach( (button) => button.classList.remove('loser') );
+
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
 
@@ -121,7 +124,7 @@ function game() {
   else if (lostRegEx.test(finalMessage)) {
     computerStreak = parseInt(computerScore.textContent.slice(-1)) + 1;
     computerScore.textContent = `Score: ${computerStreak}`;
-    this.classList.add('winner');
+    this.classList.add('loser');
   }
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
