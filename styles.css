@@ -3,10 +3,10 @@ https://fonts.google.com/specimen/Vast+Shadow?preview.text=TITLE&preview.layout=
 https://www.w3schools.com/cssref/css_selectors.php
 https://stackoverflow.com/questions/9555998/viewport-of-background-image-centered
 */
-
+/*
 * {
   border: solid red 1px;
-}
+}*/
 
 html {
   width: 100%;
@@ -71,6 +71,7 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
 }
 
 .table .title {
