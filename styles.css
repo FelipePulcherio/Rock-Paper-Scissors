@@ -121,6 +121,14 @@ body {
   filter: saturate(0.7) contrast(1.5) brightness(1.2);
 }
 
+.player .container:hover {
+  transform: scale(1.15);
+}
+
+.player .container img:hover {
+  box-shadow: 0px 0px 25px rgb(255, 145, 0);
+}
+
 .footer {
   width: 1000px;
   font-size: 22px;
