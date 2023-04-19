@@ -116,10 +116,12 @@ function game() {
   if (wonRegEx.test(finalMessage)) {
     playerStreak = parseInt(playerScore.textContent.slice(-1)) + 1;
     playerScore.textContent = `Score: ${playerStreak}`;
+    this.classList.add('winner');
   }
   else if (lostRegEx.test(finalMessage)) {
     computerStreak = parseInt(computerScore.textContent.slice(-1)) + 1;
     computerScore.textContent = `Score: ${computerStreak}`;
+    this.classList.add('winner');
   }
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
