@@ -120,10 +120,6 @@ function game() {
     computerStreak = parseInt(computerScore.textContent.slice(-1)) + 1;
     computerScore.textContent = `Score: ${computerStreak}`;
   }
-  else {
-    playerStreak += 0;
-    computerStreak += 0;
-  }
 
   return;
 }
