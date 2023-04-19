@@ -119,7 +119,7 @@ function game() {
   playerSelection = validatePlayerChoice(playerSelection);
 
   const computerSelection = getComputerChoice();
-  const opponent = document.querySelector(`.opponent .${computerSelection.toLocaleLowerCase()}`);
+  const opponent = document.querySelector(`.opponent .${computerSelection.toLowerCase()}`);
 
   let finalMessage = playRound(playerSelection, computerSelection);
   
