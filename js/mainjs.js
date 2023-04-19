@@ -126,6 +126,9 @@ function game() {
     computerScore.textContent = `Score: ${computerStreak}`;
     this.classList.add('loser');
   }
+  else {
+    this.classList.add('loser');
+  }
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', game) );
