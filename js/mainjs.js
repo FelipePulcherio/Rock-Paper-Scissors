@@ -115,8 +115,8 @@ function game() {
     computerStreak += 1;
   }
   else {
-    playerStreak += 1;
-    computerStreak += 1;
+    playerStreak += 0;
+    computerStreak += 0;
   }
 
   console.log(`Player Streak: ${playerStreak}, Computer Streak: ${computerStreak}`);
