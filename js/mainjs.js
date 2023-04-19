@@ -102,9 +102,9 @@ function game() {
   const wonRegEx = /won/g;
   const lostRegEx = /lost/g;
 
-  const buttons = document.querySelectorAll('.player .container');
-  buttons.forEach( (button) => button.classList.remove('winner') );
-  buttons.forEach( (button) => button.classList.remove('loser') );
+  const playerButtons = document.querySelectorAll('.player .container');
+  playerButtons.forEach( (button) => button.classList.remove('winner') );
+  playerButtons.forEach( (button) => button.classList.remove('loser') );
 
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
