@@ -106,6 +106,10 @@ function game() {
   playerButtons.forEach( (button) => button.classList.remove('winner') );
   playerButtons.forEach( (button) => button.classList.remove('loser') );
 
+  const computerButtons = document.querySelectorAll('.opponent .container');
+  computerButtons.forEach( (button) => button.classList.remove('winner') );
+  computerButtons.forEach( (button) => button.classList.remove('loser') );
+
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
 
