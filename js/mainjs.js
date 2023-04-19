@@ -110,6 +110,7 @@ function game() {
   computerButtons.forEach( (button) => button.classList.remove('winner') );
   computerButtons.forEach( (button) => button.classList.remove('loser') );
 
+  
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
 
@@ -118,6 +119,9 @@ function game() {
   playerSelection = validatePlayerChoice(playerSelection);
 
   const computerSelection = getComputerChoice();
+  const opponent = document.querySelector(`.opponent .${computerSelection.toLocaleLowerCase()}`);
+  console.log(opponent.parentElement);
+
   let finalMessage = playRound(playerSelection, computerSelection);
   
   if (wonRegEx.test(finalMessage)) {
