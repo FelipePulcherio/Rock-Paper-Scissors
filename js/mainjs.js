@@ -102,6 +102,7 @@ function game() {
   const wonRegEx = /won/g;
   const lostRegEx = /lost/g;
 
+  const buttons = document.querySelectorAll('.player .container');
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
 
@@ -121,6 +122,15 @@ function game() {
     computerScore.textContent = `Score: ${computerStreak}`;
   }
 
+  if (parseInt(playerScore.textContent.slice(-1)) === 5) {
+    buttons.forEach( (button) => button.removeEventListener('click', game) );
+    console.log("Player is the winner!");
+  }
+  else if (parseInt(computerScore.textContent.slice(-1)) === 5) {
+    buttons.forEach( (button) => button.removeEventListener('click', game) );
+    console.log("Computer is the winner!");
+  }
+
   return;
 }
 
@@ -130,4 +140,5 @@ function getPlayerChoice(e) {
 }
 
 const buttons = document.querySelectorAll('.player .container');
+console.log(buttons);
 buttons.forEach( (button) => button.addEventListener('click', game) );
