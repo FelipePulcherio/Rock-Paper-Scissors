@@ -114,6 +114,7 @@ function game() {
   const newButton = document.createElement('button');
   newButton.textContent = "PLAY AGAIN!"
 
+  const newParagraph = document.createElement('p');
   
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
@@ -146,13 +147,15 @@ function game() {
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', game) );
+    newParagraph.textContent = "You won the game! Want to keep playing?";
+    game.appendChild(newParagraph);
     game.appendChild(newButton);
-    /*console.log("Player is the winner!");*/
   }
   else if (parseInt(computerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', game) );
+    newParagraph.textContent = "You lost the game! Want to try again?";
+    game.appendChild(newParagraph);
     game.appendChild(newButton);
-    /*console.log("Computer is the winner!");*/
   }
 
   return;
