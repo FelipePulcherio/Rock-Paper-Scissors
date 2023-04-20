@@ -148,6 +148,11 @@ body {
   box-shadow: 0px 0px 25px rgb(255, 0, 0);
 }
 
+.game > p {
+  font-family: inherit;
+  font-size: 19px;
+}
+
 .game > button {
   margin: 0;
   padding: 10px;
