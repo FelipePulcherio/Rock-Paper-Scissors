@@ -110,6 +110,10 @@ function game() {
   computerButtons.forEach( (button) => button.classList.remove('winner') );
   computerButtons.forEach( (button) => button.classList.remove('loser') );
 
+  const game = document.querySelector('.game');
+  const newButton = document.createElement('button');
+  newButton.textContent = "PLAY AGAIN!"
+
   
   const playerScore = document.querySelector(".player .score");
   const computerScore = document.querySelector(".opponent .score");
@@ -142,10 +146,12 @@ function game() {
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', game) );
+    game.appendChild(newButton);
     /*console.log("Player is the winner!");*/
   }
   else if (parseInt(computerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', game) );
+    game.appendChild(newButton);
     /*console.log("Computer is the winner!");*/
   }
 
