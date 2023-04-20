@@ -161,5 +161,21 @@ function playGame() {
   return;
 }
 
+function playAgain() {
+  const playerScore = document.querySelector(".player .score");
+  const computerScore = document.querySelector(".opponent .score");
+  playerScore.textContent = "Score: 0";
+  computerScore.textContent = "Score: 0";
+
+  const game = document.querySelector('.game');
+  const newButton = document.querySelector('.game button');
+  const newParagraph = document.querySelector('.game p');
+  game.removeChild(newParagraph);
+  game.removeChild(newButton);
+
+  const buttons = document.querySelectorAll('.player .container');
+  buttons.forEach( (button) => button.addEventListener('click', playGame) );
+}
+
 const buttons = document.querySelectorAll('.player .container');
 buttons.forEach( (button) => button.addEventListener('click', playGame) );
