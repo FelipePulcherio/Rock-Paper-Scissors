@@ -172,6 +172,14 @@ function playAgain() {
   playerScore.textContent = "Score: 0";
   computerScore.textContent = "Score: 0";
 
+  const playerButtons = document.querySelectorAll('.player .container');
+  playerButtons.forEach( (button) => button.classList.remove('winner') );
+  playerButtons.forEach( (button) => button.classList.remove('loser') );
+
+  const computerButtons = document.querySelectorAll('.opponent .container');
+  computerButtons.forEach( (button) => button.classList.remove('winner') );
+  computerButtons.forEach( (button) => button.classList.remove('loser') );
+
   const game = document.querySelector('.game');
   const newButton = document.querySelector('.game button');
   const newParagraph = document.querySelector('.game p');
