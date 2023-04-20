@@ -3,10 +3,10 @@ https://fonts.google.com/specimen/Vast+Shadow?preview.text=TITLE&preview.layout=
 https://www.w3schools.com/cssref/css_selectors.php
 https://stackoverflow.com/questions/9555998/viewport-of-background-image-centered
 */
-
+/*
 * {
   border: solid red 1px;
-}
+}*/
 
 html {
   width: 100%;
@@ -139,6 +139,14 @@ body {
 
 .container.loser img {
   box-shadow: 0px 0px 25px rgb(255, 0, 0);
+}
+
+.game > button {
+  margin: 0;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 19px;
+  background-color: rgba(255, 187, 0, 0.35);
 }
 
 .footer {
