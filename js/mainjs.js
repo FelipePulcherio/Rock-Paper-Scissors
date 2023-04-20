@@ -96,7 +96,7 @@ function playRound(playerSelection, computerSelection) {
   return message;
 }
 
-function game() {
+function playGame() {
   let playerStreak = 0;
   let computerStreak = 0;
   const wonRegEx = /won/g;
@@ -146,13 +146,13 @@ function game() {
   }
 
   if (parseInt(playerScore.textContent.slice(-1)) === 5) {
-    buttons.forEach( (button) => button.removeEventListener('click', game) );
+    buttons.forEach( (button) => button.removeEventListener('click', playGame) );
     newParagraph.textContent = "You won the game! Want to keep playing?";
     game.appendChild(newParagraph);
     game.appendChild(newButton);
   }
   else if (parseInt(computerScore.textContent.slice(-1)) === 5) {
-    buttons.forEach( (button) => button.removeEventListener('click', game) );
+    buttons.forEach( (button) => button.removeEventListener('click', playGame) );
     newParagraph.textContent = "You lost the game! Want to try again?";
     game.appendChild(newParagraph);
     game.appendChild(newButton);
@@ -162,4 +162,4 @@ function game() {
 }
 
 const buttons = document.querySelectorAll('.player .container');
-buttons.forEach( (button) => button.addEventListener('click', game) );
+buttons.forEach( (button) => button.addEventListener('click', playGame) );
