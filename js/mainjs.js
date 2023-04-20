@@ -150,12 +150,17 @@ function playGame() {
     newParagraph.textContent = "You won the game! Want to keep playing?";
     game.appendChild(newParagraph);
     game.appendChild(newButton);
+
+    const playAgainButton = document.querySelector('.game button');
+    playAgainButton.addEventListener('click', playAgain);
   }
   else if (parseInt(computerScore.textContent.slice(-1)) === 5) {
     buttons.forEach( (button) => button.removeEventListener('click', playGame) );
     newParagraph.textContent = "You lost the game! Want to try again?";
     game.appendChild(newParagraph);
     game.appendChild(newButton);
+    const playAgainButton = document.querySelector('.game button');
+    playAgainButton.addEventListener('click', playAgain);
   }
 
   return;
