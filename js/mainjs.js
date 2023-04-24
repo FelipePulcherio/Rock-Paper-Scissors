@@ -190,5 +190,12 @@ function playAgain() {
   buttons.forEach( (button) => button.addEventListener('click', playGame) );
 }
 
+function gitHubLink() {
+  window.open("https://github.com/FelipePulcherio/");
+}
+
 const buttons = document.querySelectorAll('.player .container');
 buttons.forEach( (button) => button.addEventListener('click', playGame) );
+
+const gitHub = document.querySelector('.footer img');
+gitHub.addEventListener('click', gitHubLink);
